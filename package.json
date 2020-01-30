@@ -1,0 +1,19 @@
+{
+	"name": "requirifier-requiredir",
+	"version": "0.0.0",
+	"main": "index.js",
+	"browser": "browser.js",
+	"scripts": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ARitz-Cracker/browser-requirifier"
+	},
+	"author": "Aritz Beobide-Cardinal <aritz@aritzcracker.ca>",
+	"license": "GPL3",
+	"bugs": {
+		"url": "https://github.com/ARitz-Cracker/browser-requirifier/issues"
+	},
+	"homepage": "https://github.com/ARitz-Cracker/browser-requirifier",
+	"dependencies": {},
+	"devDependencies": {}
+}
