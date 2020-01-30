@@ -14,13 +14,14 @@ const resolvePath = function(path){
 	while(path.endsWith("/..")){
 		path = path.substring(0, path.lastIndexOf("/", path.length - 3));
 	}
+	return path;
 }
 const requireDir = function(dir){
 	dir = resolvePath(dir) + "/";
 	const allFiles = Object.keys(globalThis.requirifierModuleDefinitions);
 	const result = {};
 	for(let i = 0; i < allFiles.length; i += 1){
-		const file = allfiles[i];
+		const file = allFiles[i];
 		if(file.startsWith(dir)){
 			const slashIndex = file.indexOf("/", dir.length + 1);
 			if(
@@ -28,7 +29,7 @@ const requireDir = function(dir){
 					file.indexOf("/", slashIndex + 1) === -1 && file.endsWith("/index")
 				)
 			){
-				result[file] = require(file);
+				result[file.substring(file.lastIndexOf("/") + 1)] = require(file);
 			}
 		}
 	}
