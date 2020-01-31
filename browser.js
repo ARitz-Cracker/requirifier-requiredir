@@ -29,7 +29,7 @@ const requireDir = function(dir){
 					file.indexOf("/", slashIndex + 1) === -1 && file.endsWith("/index")
 				)
 			){
-				result[file.substring(file.lastIndexOf("/") + 1)] = require(file);
+				result[file.substring(file.lastIndexOf("/") + 1, file.length - 3)] = require(file);
 			}
 		}
 	}
